@@ -19,9 +19,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-// Route::get('students', function () {
-//     return 'this is usha api';
-// });
+Route::get('students', function () {
+    return 'this is usha api';
+});
 
 Route::get('students', [StudentController::class, 'index']);
 Route::post('students', [StudentController::class, 'store']);
