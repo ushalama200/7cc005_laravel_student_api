@@ -1,8 +1,8 @@
 <?php
 
-use App\Http\Controllers\APi\StudentController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\StudentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -10,8 +10,8 @@ use Illuminate\Support\Facades\Route;
 |--------------------------------------------------------------------------
 |
 | Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "api" middleware group. Make something great!
+| routes are loaded by the RouteServiceProvider within a group which
+| is assigned the "api" middleware group. Enjoy building your API!
 |
 */
 
@@ -23,9 +23,13 @@ Route::get('students', function () {
     return 'this is usha api';
 });
 
+
+
 Route::get('students', [StudentController::class, 'index']);
 Route::post('students', [StudentController::class, 'store']);
 Route::get('students/{id}', [StudentController::class, 'show']);
 Route::get('students/{id}/edit', [StudentController::class, 'edit']);
 Route::put('students/{id}/edit', [StudentController::class, 'update']);
 Route::delete('students/{id}/delete', [StudentController::class, 'destroy']);
+
+ 
