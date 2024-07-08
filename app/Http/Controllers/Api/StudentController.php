@@ -123,7 +123,7 @@ class StudentController extends Controller
             } else {
                 return response()->json([
                     'status' => 404,
-                    'message' => "No Such Student Fount !"
+                    'message' => "No Such Student Found !"
                 ], 500);
             }
         }
@@ -136,7 +136,7 @@ class StudentController extends Controller
             $student->delete();
             return response()->json([
                 'status' => 200,
-                'message' => "Student is deleted !"
+                'message' => "Student is deleted successfully!"
             ], 200);
         } else {
             return response()->json([
