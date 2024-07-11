@@ -50,7 +50,7 @@ class StudentController extends Controller
             if ($students) {
                 return response()->json([
                     'status' => 200,
-                    'message' => "Student Created Successfully"
+                    'message' => "New Student Added  Successfully"
                 ], 200);
             } else {
                 return response()->json([
